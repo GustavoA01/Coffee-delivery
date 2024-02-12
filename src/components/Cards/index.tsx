@@ -27,19 +27,16 @@ export function Card({ payment, title, description, category, counter }: CardPro
         if (count > 0) {
             setCount(state => state - 1)
         }
-
     }
 
     function createObject() {
-
-
         const newProduct = {
             title: title,
             description: description,
             category: category,
             counter: count,
         };
-        setNewProduct(newProduct);
+        setNewProduct(newProduct)
     }
 
     function handleAddCar() {

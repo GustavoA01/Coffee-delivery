@@ -40,10 +40,6 @@ export function ShopCar() {
         const UFValue = document.getElementById('uf').value
         const neighborhoodValue = document.getElementById('neighborhood').value
 
-
-       // if(
-         //   numberValue===number CEPValue UFValue complementValue)
-
         const addressInfo = {
             street: streetValue,
             city: cityValue,
