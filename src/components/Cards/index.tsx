@@ -30,19 +30,21 @@ export function Card({ payment, title, description, category, counter }: CardPro
     }
 
     function createObject() {
-        const newProduct = {
-            title: title,
-            description: description,
-            category: category,
-            counter: count,
-        };
-        setNewProduct(newProduct)
+        if(count != 0){
+            const newProduct = {
+                title: title,
+                description: description,
+                category: category,
+                counter: count,
+            }
+            setNewProduct(newProduct)
+        }
     }
 
     function handleAddCar() {
         let isRepeated
         products.map(product => {
-            if (product.title === title) {
+            if (product.title === title && count != 0) {
                 isRepeated = true
                 return product.counter = count
             }
